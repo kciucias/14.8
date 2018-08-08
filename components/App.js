@@ -1,6 +1,8 @@
-App = React.createClass({
+var GIPHY_PUB_KEY = '0caB0mf9hB1Iwf0YjYpmMZuLpjth9saa',
+    GIPHY_API_URL = 'https://api.giphy.com';
 
-    getInitialState() {
+App = React.createClass({
+    getInitialState: function() {
         return {
             loading: false,
             searchingText: '',
@@ -47,7 +49,7 @@ App = React.createClass({
             width: '90%'
         };
 
- 
+
         return (
             <div style={styles}>
                 <h1>Wyszukiwarka GIFow!</h1>
@@ -60,7 +62,7 @@ App = React.createClass({
             />
             <Search onSearch={this.handleSearch}/>
             </div>
-        );
+        )
     }
-});
+})
 
